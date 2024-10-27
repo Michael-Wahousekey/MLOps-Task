@@ -44,17 +44,9 @@ jobs:
         run: |
           docker push wohousekey/randomforest:latest
 
-      # - name: Deploy to Kubernetes
-      #   env:
-      #     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}  # Ensure you set this in GitHub Secrets
-      #   run: |
-      #     echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig.yaml
-      #     kubectl --kubeconfig=kubeconfig.yaml set image deployment/your-deployment-name your-container-name=yourusername/randomforest:latest
-
-      - name: Commit and Push New Model to GitHub
+      - name: Deploy to Kubernetes
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}  # Ensure you set this in GitHub Secrets
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add previous_rf_model.pkl  # Save the new model with the desired filename
-          git commit -m "Update model to version ${{ github.run_number }}"
-          git push origin main
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig.yaml
+          kubectl --kubeconfig=kubeconfig.yaml apply -f kubernetes-job.yaml
