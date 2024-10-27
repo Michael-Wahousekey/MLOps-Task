@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r dependency.txt
+          pip install --no-cache-dir -r dependency.txt
 
       - name: Build Model
         run: |
