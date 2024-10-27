@@ -1,0 +1,104 @@
+[2024-10-27 05:02:40Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'Runner': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.runner'
+[2024-10-27 05:02:40Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2024-10-27 05:02:40Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.22631.
+[2024-10-27 05:02:40Z INFO Listener] Version: 2.320.0
+[2024-10-27 05:02:40Z INFO Listener] Commit: 78f21670b4a58aff19b5189207f54eb2bee324d1
+[2024-10-27 05:02:40Z INFO Listener] Culture: en-ID
+[2024-10-27 05:02:40Z INFO Listener] UI Culture: en-US
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO Listener] Validating directory permissions for: 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO CommandLineParser] Parse
+[2024-10-27 05:02:40Z INFO CommandLineParser] Parsing 1 args
+[2024-10-27 05:02:40Z INFO CommandLineParser] parsing argument
+[2024-10-27 05:02:40Z INFO CommandLineParser] HasArgs: False
+[2024-10-27 05:02:40Z INFO CommandLineParser] Adding Command: run
+[2024-10-27 05:02:40Z INFO Listener] Arguments parsed
+[2024-10-27 05:02:40Z INFO Runner] ExecuteCommand
+[2024-10-27 05:02:40Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\micha\Downloads\MLOps-Task\action-runner\bin\Runner.Listener.dll
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] binPath: C:\Users\micha\Downloads\MLOps-Task\action-runner\bin
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] RootFolder: C:\Users\micha\Downloads\MLOps-Task\action-runner
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'Runner': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.runner'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] ConfigFilePath: C:\Users\micha\Downloads\MLOps-Task\action-runner\.runner
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] CredFilePath: C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials_migrated'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials_migrated
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'Service': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.service'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\micha\Downloads\MLOps-Task\action-runner\.service
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'help': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'version': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'check': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Command 'configure': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Command 'remove': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Command 'warmup': 'False'
+[2024-10-27 05:02:40Z INFO ConfigurationManager] LoadSettings
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured()
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured: True
+[2024-10-27 05:02:40Z INFO ConfigurationManager] Is configured: True
+[2024-10-27 05:02:40Z INFO ConfigurationStore] Read setting file: 319 chars
+[2024-10-27 05:02:40Z INFO ConfigurationManager] Settings Loaded
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-10-27 05:02:40Z INFO CommandSettings] Command 'run': 'True'
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured()
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured: True
+[2024-10-27 05:02:40Z INFO ConfigurationManager] Is configured: True
+[2024-10-27 05:02:40Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2024-10-27 05:02:40Z INFO Runner] Set runner startup type - Manual
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'once': 'False'
+[2024-10-27 05:02:40Z INFO CommandSettings] Flag 'once': 'False'
+[2024-10-27 05:02:40Z INFO Runner] RunAsync
+[2024-10-27 05:02:40Z INFO ConfigurationManager] LoadSettings
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured()
+[2024-10-27 05:02:40Z INFO ConfigurationStore] IsConfigured: True
+[2024-10-27 05:02:40Z INFO ConfigurationManager] Is configured: True
+[2024-10-27 05:02:40Z INFO ConfigurationManager] Settings Loaded
+[2024-10-27 05:02:40Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "LAPTOP-NSCLIALM",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus13.actions.githubusercontent.com/DfmTwgc949Ndcz4k7mqfdWxo3QJNK07gPmRPy6HTZOrap1KVYz/",
+  "GitHubUrl": "https://github.com/Michael-Wahousekey/MLOps-Task",
+  "WorkFolder": "_work"
+}
+[2024-10-27 05:02:40Z INFO MessageListener] Loading Credentials
+[2024-10-27 05:02:40Z INFO ConfigurationStore] HasCredentials()
+[2024-10-27 05:02:40Z INFO ConfigurationStore] stored True
+[2024-10-27 05:02:40Z INFO CredentialManager] GetCredentialProvider
+[2024-10-27 05:02:40Z INFO CredentialManager] Creating type OAuth
+[2024-10-27 05:02:40Z INFO CredentialManager] Creating credential type: OAuth
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\bin'
+[2024-10-27 05:02:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\micha\Downloads\MLOps-Task\action-runner'
+[2024-10-27 05:02:40Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials_rsaparams'
+[2024-10-27 05:02:40Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\micha\Downloads\MLOps-Task\action-runner\.credentials_rsaparams
+[2024-10-27 05:02:40Z INFO MessageListener] Attempt to create session.
+[2024-10-27 05:02:40Z INFO MessageListener] Connecting to the Runner Server...
+[2024-10-27 05:02:40Z INFO RunnerServer] EstablishVssConnection
+[2024-10-27 05:02:40Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-10-27 05:02:40Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-10-27 05:02:40Z INFO RunnerServer] EstablishVssConnection
+[2024-10-27 05:02:40Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-10-27 05:02:40Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-10-27 05:02:40Z INFO RunnerServer] EstablishVssConnection
+[2024-10-27 05:02:40Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-10-27 05:02:40Z INFO GitHubActionsService] Starting operation Location.GetConnectionData

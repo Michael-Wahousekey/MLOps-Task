@@ -7,8 +7,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # Use your self-hosted runner
     steps:
+      - name: Check Runner Info
+        run: |
+          echo "Running on: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+
       - name: Checkout Code
         uses: actions/checkout@v2
 
@@ -45,8 +50,5 @@ jobs:
           docker push wohousekey/randomforest:latest
 
       - name: Deploy to Kubernetes
-        env:
-          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}  # Ensure you set this in GitHub Secrets
         run: |
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig.yaml
-          kubectl --kubeconfig=kubeconfig.yaml apply -f kubernetes-job.yaml
+          kubectl apply -f kubernetes-job.yaml
