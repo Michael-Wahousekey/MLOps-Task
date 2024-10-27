@@ -19,5 +19,6 @@ kubectl delete job rf-hyperparameter-tuning
 kubectl get jobs
 
 <!-- To get the pods -->
+t
 kubectl get pods
 
