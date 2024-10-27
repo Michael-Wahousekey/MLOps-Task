@@ -30,6 +30,7 @@ spec:
 1. Adjust the hyperparameters accordingly
 2. If it (the Mean Squared Error of the model) is better or if there has yet to be a previous model then
 3. It will create a "previous_rf_model.pkl" which is the current best model
+    - Delete "previous_rf_model.pkl", if you want to remove the old version
 4. once that passes it will build the docker image -> pushed to docker hub 
 5. Finally deploying it in the kubernetes cluster
 
