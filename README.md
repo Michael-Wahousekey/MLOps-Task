@@ -69,6 +69,7 @@ spec:
     - build.yml
     - deploy.yml
 6. Use a cloud storage like EC2 to store for the current version (the better version), since currently it just uses the repository itself to store for the current version of the model.
+7. Add something like Cloudwatch, to monitor the health of the pods, and if its crashing or in an error, rerun the pod
 
 # Challenges Faced:
 1. Never used kubernetes before, found it fun to use
