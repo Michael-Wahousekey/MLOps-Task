@@ -1,6 +1,6 @@
+# Import necessary libraries
 import joblib
 import csv
-import time
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.datasets import fetch_california_housing
@@ -50,10 +50,7 @@ r2 = r2_score(y_test, y_pred)
 print(f"Mean Squared Error (MSE): {mse}")
 print(f"R-squared (R²): {r2}")
 
+
 # Save the best model to a file
 joblib.dump(best_rf_model, 'best_rf_model.pkl')
 print("Best model saved to best_rf_model.pkl")
-
-# Keep the container alive
-print("Model training complete. Container will now sleep.")
-time.sleep(3600)  # Keep the container running for 1 hour
