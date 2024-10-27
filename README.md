@@ -19,5 +19,7 @@ kubectl delete job rf-hyperparameter-tuning
 kubectl get jobs
 
 <!-- To get the pods -->
+
+etst
 kubectl get pods
 
