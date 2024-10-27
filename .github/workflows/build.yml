@@ -39,12 +39,8 @@ jobs:
           docker build -t wohousekey/randomforest:latest .
 
       - name: Log in to Docker Hub
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}  # Add this secret in GitHub
-          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}        # Add this secret in GitHub
         run: |
-          echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
+          docker login
 
       - name: Push Docker Image
         run: |
