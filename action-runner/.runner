@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 2,
-  "agentName": "LAPTOP-NSCLIALM",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelinesghubeus13.actions.githubusercontent.com/DfmTwgc949Ndcz4k7mqfdWxo3QJNK07gPmRPy6HTZOrap1KVYz/",
-  "gitHubUrl": "https://github.com/Michael-Wahousekey/MLOps-Task",
-  "workFolder": "_work"
-}
