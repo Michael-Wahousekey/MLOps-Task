@@ -9,10 +9,10 @@ jobs:
   build:
     runs-on: self-hosted  # Use your self-hosted runner
     steps:
-      - name: Check Runner Info
+      - name: Debug Environment Variables
         run: |
-          echo "Running on: $RUNNER_NAME"
-          echo "Runner OS: $RUNNER_OS"
+          echo "DOCKER_USERNAME is set: $DOCKER_USERNAME"
+          echo "DOCKER_TOKEN is set: $DOCKER_TOKEN"    
 
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -40,10 +40,10 @@ jobs:
 
       - name: Log in to Docker Hub
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}  # Add this secret in GitHub
-          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}        # Add this secret in GitHub
+          DOCKER_USERNAME: $DOCKER_USERNAME # Add this secret in GitHub
+          DOCKER_TOKEN: $DOCKER_USERNAME        # Add this secret in GitHub
         run: |
-          echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          echo "$DOCKER_USERNAME" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
       - name: Push Docker Image
         run: |
