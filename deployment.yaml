@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rf-deployment
+spec:
+  replicas: 1  # Start with one replica
+  selector:
+    matchLabels:
+      app: rf-model
+  template:
+    metadata:
+      labels:
+        app: rf-model
+    spec:
+      containers:
+      - name: rf-container
+        image: wohousekey/randomforest:latest
+        ports:
+        - containerPort: 80  # or the port your service runs on

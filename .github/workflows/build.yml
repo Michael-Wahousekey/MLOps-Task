@@ -46,6 +46,14 @@ jobs:
         run: |
           docker push wohousekey/randomforest:latest
 
-      - name: Deploy to Kubernetes
+      - name: Deploy Model
+        run: |
+          kubectl apply -f deployment.yaml
+  
+      - name: Set up Autoscaling
+        run: |
+          kubectl apply -f hpa-kubernetes-job.yaml
+  
+      - name: Deploy Hyperparameter Tuning Job
         run: |
           kubectl apply -f kubernetes-job.yaml
