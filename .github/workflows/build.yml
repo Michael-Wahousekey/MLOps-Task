@@ -9,11 +9,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Check Runner Info
-        run: |
-          echo "Running on: $RUNNER_NAME"
-          echo "Runner OS: $RUNNER_OS"
-
       - name: Checkout Code
         uses: actions/checkout@v2
 

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: rf-deployment
 spec:
-  replicas: 1  # Start with one replica
+  replicas: 3
   selector:
     matchLabels:
       app: rf-model
@@ -15,5 +15,6 @@ spec:
       containers:
       - name: rf-container
         image: wohousekey/randomforest:latest
+        command: ["sh", "-c", "python /app/randomForest.py && tail -f /dev/null"]
         ports:
-        - containerPort: 80  # or the port your service runs on
+        - containerPort: 80

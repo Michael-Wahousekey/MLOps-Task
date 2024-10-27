@@ -1,22 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: rf-hyperparameter-tuning
+  name: rf-model-training
 spec:
-  parallelism: 4  # Run 4 parallel jobs
-  completions: 10  # Total 10 jobs to complete
+  parallelism: 4  # Number of parallel pods
+  completions: 4  # Total number of pods to complete
   template:
     spec:
       containers:
       - name: rf-container
         image: wohousekey/randomforest:latest
         args: ["python", "/app/randomForest.py"]
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "500m"
-          limits:
-            memory: "512Mi"
-            cpu: "1"
       restartPolicy: Never
-  backoffLimit: 4
