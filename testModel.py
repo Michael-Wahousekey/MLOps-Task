@@ -2,6 +2,7 @@ import joblib
 import os
 from sklearn.datasets import fetch_california_housing
 from sklearn.metrics import mean_squared_error, r2_score
+import sys
 
 def load_test_data():
     # Load California Housing dataset
@@ -42,16 +43,19 @@ def main():
 
         # Compare the performance
         if new_mse < prev_mse:
+            # Success
             print("New model performs better than the previous model.")
-            with open('model_comparison.txt', 'w') as f:
-                f.write(f"New model MSE: {new_mse}, Previous model MSE: {prev_mse}\n")
+            joblib.dump(new_model, previous_model_path)
+            sys.exit(0)
         else:
+            # Fail
             print("Previous model performs better or is equal to the new model.")
-            with open('model_comparison.txt', 'w') as f:
-                f.write(f"Previous model MSE: {prev_mse}, New model MSE: {new_mse}\n")
+            sys.exit(1)
     else:
+        # Success
         print("No previous model found. Using the new model as the baseline.")
-        joblib.dump(new_model, previous_model_path)  # Save the new model as the previous model for future comparisons
+        joblib.dump(new_model, previous_model_path) 
+        sys.exit(0)
 
 if __name__ == "__main__":
     main()
