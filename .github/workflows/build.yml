@@ -29,13 +29,13 @@ jobs:
         run: |
           python testModel.py
 
-    #   - name: Build Docker Image
-    #     run: |
-    #       docker build -t wohousekey/randomforest:latest .
+      - name: Build Docker Image
+        run: |
+          docker build -t wohousekey/randomforest:latest .
 
-    #   - name: Push Docker Image
-    #     run: |
-    #       docker push wohousekey/randomforest:latest
+      - name: Push Docker Image
+        run: |
+          docker push wohousekey/randomforest:latest
 
       # - name: Deploy to Kubernetes
       #   env:
