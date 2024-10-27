@@ -33,6 +33,14 @@ jobs:
       - name: Test Model
         run: |
           python testModel.py
+        
+      - name: Commit and Push New Model to GitHub
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add previous_rf_model.pkl  # Save the new model with the desired filename
+          git commit -m "Update model to version ${{ github.run_number }}"
+          git push origin main
 
       - name: Build Docker Image
         run: |
