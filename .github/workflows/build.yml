@@ -1,0 +1,53 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build Model
+        run: |
+          python randomForest.py
+
+      - name: Test Model
+        run: |
+          python testModel.py
+
+    #   - name: Build Docker Image
+    #     run: |
+    #       docker build -t wohousekey/randomforest:latest .
+
+    #   - name: Push Docker Image
+    #     run: |
+    #       docker push wohousekey/randomforest:latest
+
+    #   - name: Deploy to Kubernetes
+    #     env:
+    #       KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}  # Ensure you set this in GitHub Secrets
+    #     run: |
+    #       echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig.yaml
+    #       kubectl --kubeconfig=kubeconfig.yaml set image deployment/your-deployment-name your-container-name=yourusername/randomforest:latest
+
+      - name: Commit and Push New Model to GitHub
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add models/model_v${{ github.run_number }}.pkl
+          git commit -m "Update model to version ${{ github.run_number }}"
+          git push origin main
