@@ -60,16 +60,17 @@ spec:
   run: |
     echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 ```
-2. Within CI/CD, replace all kubernetes local functions to GKE and configure the KUBE_CONFIG within the secret variable in Github.
+2. what i should have done is run the 4 pods parallelly to build the models, then send it to the kubernetes deployment and the deployment will check every minute if there are any files in a folder for the models, and if so it will compare with the best model in a different folder, and if it is better than the current one, it will replace the best model in that folder and then push it into a cloud storage like s3 bucket
+3. Within CI/CD, replace all kubernetes local functions to GKE and configure the KUBE_CONFIG within the secret variable in Github.
     - Why didn't i do it in a GKE? Simple, i'm a bit cautious in the worst case i burn off the credit and paid off from my card. Nevertheless, its just a matter of migrating it to a cloud service.
-3. Exposing service by using a load balancer to get an external ip which makes it accessible outside the cluster.
-4. Better naming conventions.
-5. Seperating pipeline.yml into multiple parts for readability and scalability:
+4. Exposing service by using a load balancer to get an external ip which makes it accessible outside the cluster.
+5. Better naming conventions.
+6. Seperating pipeline.yml into multiple parts for readability and scalability:
     - test.yml
     - build.yml
     - deploy.yml
-6. Use a cloud storage like EC2 to store for the current version (the better version), since currently it just uses the repository itself to store for the current version of the model.
-7. Add something like Cloudwatch, to monitor the health of the pods, and if its crashing or in an error, rerun the pod
+7. Use a cloud storage like EC2 to store for the current version (the better version), since currently it just uses the repository itself to store for the current version of the model.
+8. Add something like Cloudwatch, to monitor the health of the pods, and if its crashing or in an error, rerun the deployment pod
 
 # Challenges Faced:
 1. Never used kubernetes before, found it fun to use
@@ -89,4 +90,4 @@ docker push wohousekey/randomforest:latest
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
 <!-- Delete all -->
-kubectl delete all -all
+kubectl delete all --all
